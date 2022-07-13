@@ -1,9 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BlogTeaser from "../components/blog/BlogTeaser.astro";
+
+const title = "Welcome to my site. | JasperDeLanghe";
+const description =
+  "I'm a web developer based in Ghent, Belgium and I build web solutions mostly for myself. But I'm willing to share!";
 ---
 
-<Layout title="Welcome to my site. | JasperDeLanghe" activePage="home">
+<Layout title={title} description={description} activePage="home">
   <main class="container mx-auto max-w-5xl px-4 xl:pl-4 mt-12 lg:mt-20">
     <!-- Hero section -->
     <div class="sm:text-center lg:text-left">

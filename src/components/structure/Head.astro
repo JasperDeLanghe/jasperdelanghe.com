@@ -1,24 +1,46 @@
 ---
 export interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props as Props;
+const { title, description } = Astro.props as Props;
 ---
 
 <head>
-  <meta charset="UTF-8" />
+  <!-- Global Metadata -->
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <!-- FONT IMPORTS -->
+  <!-- Primary Meta Tags -->
+  <title>{title}</title>
+  <meta name="title" content={title} />
+  <meta name="description" content={description} />
+
+  <!-- Open Graph / Facebook -->
+  <!-- TODO: Facebook meta tags -->
+
+  <!-- <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://astro.build/social.png" /> -->
+
+  <!-- Twitter -->
+  <!-- TODO: Twitter meta tags -->
+
+  <!-- <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={Astro.canonicalURL} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content="https://astro.build/social.png" /> -->
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
     rel="stylesheet"
   />
-
-  <title>{title}</title>
 </head>

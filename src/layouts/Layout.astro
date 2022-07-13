@@ -6,15 +6,16 @@ import FloatingSocials from "../components/floating-socials/FloatingSocials.astr
 
 export interface Props {
   title: string;
+  description: string;
   activePage?: "home" | "projects" | "blog";
 }
 
-const { title, activePage } = Astro.props as Props;
+const { title, description, activePage } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <Head title={title} />
+  <Head title={title} description={description} />
 
   <body class="text-slate-700 selection:bg-red-200">
     <Header active={activePage} />
