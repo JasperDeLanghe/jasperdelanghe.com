@@ -5,8 +5,10 @@ export interface Props {
 
 const { active } = Astro.props as Props;
 
-const linkClasses = `hover:underline decoration-green-400 decoration-4 text-base`;
-const activeClasses = `text-green-400 hover:no-underline`;
+const linkClasses = `hover:text-red-600 text-base`;
+const activeClasses = `text-red-400`;
+
+const buttonClass = `inline-block px-6 py-2.5 bg-red-400 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-600 hover:shadow-lg focus:ring-0 transition duration-150 ease-in-out`;
 ---
 
 <nav>
@@ -20,7 +22,10 @@ const activeClasses = `text-green-400 hover:no-underline`;
     href="#"
     >Projects
   </a>
-  <a class={`${linkClasses} ${active === "blog" && activeClasses}`} href="#"
+  <a
+    class={`${linkClasses} ${active === "blog" && activeClasses} mr-3`}
+    href="#"
     >Blog
   </a>
+  <a class={`${buttonClass}`} href="#">Contact</a>
 </nav>
