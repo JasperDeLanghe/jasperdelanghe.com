@@ -7,5 +7,5 @@ module.exports = {
       display: ['"Courgette"', "sans-serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
