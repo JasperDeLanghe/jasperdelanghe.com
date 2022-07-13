@@ -1,0 +1,26 @@
+---
+export interface Props {
+  active: "home" | "projects" | "blog";
+}
+
+const { active } = Astro.props as Props;
+
+const linkClasses = `hover:underline decoration-green-400 decoration-4 text-base`;
+const activeClasses = `text-green-400 hover:no-underline`;
+---
+
+<nav>
+  <a
+    class={`${linkClasses} ${active === "home" && activeClasses} mr-3`}
+    href="#"
+    >Home
+  </a>
+  <a
+    class={`${linkClasses} ${active === "projects" && activeClasses} mr-3`}
+    href="#"
+    >Projects
+  </a>
+  <a class={`${linkClasses} ${active === "blog" && activeClasses}`} href="#"
+    >Blog
+  </a>
+</nav>
