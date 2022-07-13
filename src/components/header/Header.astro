@@ -12,7 +12,7 @@ const { active } = Astro.props as Props;
 <header class="container mx-auto max-w-5xl px-4 pt-4">
   <nav class="flex-wrap items-center flex justify-between">
     <div>
-      <h1 class="font-display text-3xl text-slate-900">JasperDeLanghe</h1>
+      <span class="font-display text-3xl text-slate-900">JasperDeLanghe</span>
     </div>
 
     <svg
@@ -31,7 +31,7 @@ const { active } = Astro.props as Props;
     </svg>
 
     <div
-      class={`hidden w-full md:flex md:items-center md:w-auto border-b-2 md:border-b-0 border-red-400 py-2 md:py-0`}
+      class={`hidden w-full md:flex md:items-center md:w-auto border-b-2 md:border-b-0 border-red-600 py-2 md:py-0`}
       id="menu"
     >
       <Links active={active} />
