@@ -1,5 +1,6 @@
 ---
 import Links from "./Links.astro";
+import SocialLinks from "../floating-socials/SocialLinks.astro";
 
 export interface Props {
   active?: "home" | "projects" | "blog";
@@ -29,8 +30,14 @@ const { active } = Astro.props as Props;
         d="M4 6h16M4 12h16M4 18h16"></path>
     </svg>
 
-    <div class={`hidden w-full md:flex md:items-center md:w-auto`} id="menu">
+    <div
+      class={`hidden w-full md:flex md:items-center md:w-auto border-b-2 md:border-b-0 border-red-400 py-2 md:py-0`}
+      id="menu"
+    >
       <Links active={active} />
+      <div class="flex justify-evenly py-4 md:hidden">
+        <SocialLinks />
+      </div>
     </div>
   </nav>
 </header>
