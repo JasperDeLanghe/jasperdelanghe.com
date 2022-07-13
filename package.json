@@ -13,6 +13,8 @@
     "@astrojs/react": "^0.3.1",
     "@astrojs/tailwind": "^0.2.4",
     "astro": "^1.0.0-beta.69",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   }
