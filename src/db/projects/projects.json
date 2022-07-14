@@ -3,7 +3,7 @@
         {
             "title": "discord-relay-bot",
             "description": "A Discord bot that relays messages to a Notion database.",
-            "img": "https://mdbootstrap.com/img/new/standard/nature/182.jpg",
+            "img": "assets/images/discord-relay-bot.png",
             "imgAlt": "Picture of the discord-relay-bot functionality",
             "github": "https://github.com/JasperDeLanghe/discord-relay-bot",
             "url": "undefined",
