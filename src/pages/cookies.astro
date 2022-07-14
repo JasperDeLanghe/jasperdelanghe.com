@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const title = "Cookie Policy | JasperDeLanghe";
+const description = "Cookie Policy";
+---
+
+<Layout title={title} description={description} noindex={true}>
+  <main class="container mx-auto max-w-5xl px-4 xl:pl-4 mt-12 lg:mt-20">
+    <!-- Hero section -->
+    <div class="text-center xl:text-left prose prose-slate lg:prose-lg">
+      <h1>Cookie Policy</h1>
+
+      <p><strong>What are cookies</strong></p>
+
+      <p>
+        Cookies are small files sent to your browser from websites you visit.
+        These files track and monitor the sites you visit and the items you
+        click on these pages.
+        <a
+          class="text-sm text-red-400"
+          href="https://us.norton.com/internetsecurity-how-to-what-are-cookies.html"
+          rel="nofollow"
+          >(source)
+        </a>
+      </p>
+
+      <p><strong>Cookies in use</strong></p>
+      <p>
+        Google Analytics (third party) - consent must be given via the cookie
+        popup, otherwise this cookie will not be set for you.
+      </p>
+
+      <p><strong>How information is being collected</strong></p>
+      <p>
+        If consent is given, you allow Google Analytics to monitor how you use
+        this website and navigate through it. You also allow me, the creator of
+        the website, to view the data that Google Analytics tracks.
+      </p>
+
+      <p><strong>Why information is being collected</strong></p>
+      <p>
+        To monitor usage of the website and for me as the creator to potentially
+        improve user experience.
+      </p>
+
+      <p><strong>How you can opt out</strong></p>
+      <p>
+        In most browsers: press F12, navigate to the "Application" tab, click
+        "Cookies" and remove any you see in the list.
+      </p>
+    </div>
+  </main>
+</Layout>

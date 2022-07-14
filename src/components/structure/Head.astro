@@ -2,9 +2,10 @@
 export interface Props {
   title: string;
   description: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props as Props;
+const { title, description, noindex } = Astro.props as Props;
 ---
 
 <head>
@@ -19,6 +20,9 @@ const { title, description } = Astro.props as Props;
   <title>{title}</title>
   <meta name="title" content={title} />
   <meta name="description" content={description} />
+
+  <!-- No index -->
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
 
   <!-- Open Graph / Facebook -->
   <!-- TODO: Facebook meta tags -->
