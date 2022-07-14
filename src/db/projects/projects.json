@@ -1,0 +1,13 @@
+{
+    "Projects": [
+        {
+            "title": "discord-relay-bot",
+            "description": "A Discord bot that relays messages to a Notion database.",
+            "img": "https://mdbootstrap.com/img/new/standard/nature/182.jpg",
+            "imgAlt": "Picture of the discord-relay-bot functionality",
+            "github": "https://github.com/JasperDeLanghe/discord-relay-bot",
+            "url": "undefined",
+            "tags": ["JS", "node.js"]
+        }
+    ]
+}

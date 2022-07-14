@@ -1,0 +1,47 @@
+---
+import { GetTagClasses } from "../../utils/tagcolormap";
+
+export interface Props {
+  title: string;
+  description: string;
+  img: string;
+  imgAlt: string;
+  github: string;
+  url?: string;
+  tags: Array<string>;
+}
+
+const { title, description, img, imgAlt, github, url, tags } =
+  Astro.props as Props;
+---
+
+<div class="rounded-lg shadow-lg bg-white max-w-lg">
+  <img class="rounded-t-lg" src={img} alt={imgAlt} />
+  <div class="p-6">
+    <div class="mb-2 text-sm uppercase">
+      {tags.map((tag) => <div class={GetTagClasses(tag)}>{tag}</div>)}
+    </div>
+    <h5 class="text-slate-900 text-xl font-medium mb-2">{title}</h5>
+    <p class="text-slate-700 text-base mb-4">
+      {description}
+    </p>
+    <a
+      href={github}
+      rel="nofollow"
+      target="_blank"
+      class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+    >
+      View code on GitHub
+    </a>
+    {url && (
+      <a
+        href={url}
+        rel="nofollow"
+        target="_blank"
+        class="inline-block px-6 py-2.5 bg-red-100 text-red-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-200 hover:shadow-lg focus:bg-red-200 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-300 active:shadow-lg transition duration-150 ease-in-out"
+      >
+        View live
+      </a>
+    )}
+  </div>
+</div>

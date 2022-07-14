@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProjectTeaser from "../components/projects/ProjectTeaser.astro";
+
+import data from "../db/projects/projects.json";
 
 const title = "My Projects | JasperDeLanghe";
 const description =
@@ -7,8 +10,30 @@ const description =
 ---
 
 <Layout title={title} description={description} activePage="projects">
-  <main
-    class="container mx-auto max-w-5xl px-4 md:pl-16 lg:pl-20 xl:pl-4 mt-12 lg:mt-20"
-  >
+  <main class="container mx-auto max-w-5xl px-4 xl:pl-4 mt-12 lg:mt-20">
+    <!-- Hero section -->
+    <div class="text-center xl:text-left">
+      <h1
+        class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl"
+      >
+        <span class="inline">My</span>
+        <span class="text-red-600 inline">projects</span>
+      </h1>
+    </div>
+    <div class="mt-12 text-center xl:text-left">
+      <div class="grid md:grid-cols-2 gap-4 justify-start">
+        {data.Projects.map((project) => (
+          <ProjectTeaser
+            title={project.title}
+            description={project.description}
+            img={project.img}
+            imgAlt={project.imgAlt}
+            github={project.github}
+            url={project.url !== "undefined" && project.url}
+            tags={project.tags}
+          />
+        ))}
+      </div>
+    </div>
   </main>
 </Layout>
