@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@astrojs/netlify": "^0.4.10",
+    "@astrojs/partytown": "^0.1.8",
     "@astrojs/react": "^0.4.1",
     "@astrojs/tailwind": "^0.2.4",
     "@tailwindcss/typography": "^0.5.4",

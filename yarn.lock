@@ -94,6 +94,14 @@
     "@astrojs/webapi" "^0.12.0"
     esbuild "^0.14.43"
 
+"@astrojs/partytown@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-0.1.8.tgz#ee5f48660c3392c4b9206c56f8f84a73fc02370c"
+  integrity sha512-jz83ZxhphNbXK3QONg8QIAvbqSJh/N4lqlj6ZhyF/RBI4sXg1bfrOEZEP9kKmHTifL7GfS4N3TzzcrC4bD4lqg==
+  dependencies:
+    "@builder.io/partytown" "^0.4.5"
+    mrmime "^1.0.0"
+
 "@astrojs/prism@0.6.0", "@astrojs/prism@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.6.0.tgz#fba82d4aa8e04c076430740c8588e97e87fc8cf5"
@@ -348,6 +356,11 @@
   dependencies:
     "@babel/helper-validator-identifier" "^7.18.6"
     to-fast-properties "^2.0.0"
+
+"@builder.io/partytown@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.4.5.tgz#3c85e25a7102336b7da4c71a46e77722da052e74"
+  integrity sha512-HcHlmMYSpOxfJ0lFVxgZrvgIjz1Q8knlGuWkBpvjIp68j+xVWg969+sn7BCfyKhcGaYlnVOY/CEBHapQBcl0jw==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
