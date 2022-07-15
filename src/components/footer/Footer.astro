@@ -19,9 +19,15 @@ const linkClasses = "hover:underline decoration-red-400 decoration-2";
       </a>
     </div>
   </div>
-
-  <!-- Load scripts -->
-  <script src="assets/scripts/main.js">
-
-  </script>
 </footer>
+
+<!-- Custom scripts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector("#menu-button");
+    const menu = document.querySelector("#menu");
+    button.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>
