@@ -3,7 +3,7 @@ setup: |
   import Layout from '../../layouts/BlogPost.astro'
 publishDate: 15 Jul 2022
 title: Introduction
-description: Write description here
+description: An introductary post to show you a little bit more about me.
 img: assets/images/blog/jasper-gribble-TgQUt4fz9s8-unsplash.jpg
 imgAlt: Picture of mountains by Jasper Gribble
 ---
