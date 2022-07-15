@@ -6,6 +6,13 @@ const title = "Welcome to my site. | JasperDeLanghe";
 const description =
   "I'm a web developer based in Ghent, Belgium and I build web solutions mostly for myself. But I'm willing to share!";
 
+let allPosts = await Astro.glob("./posts/*.md");
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.publishDate).valueOf() -
+    new Date(a.frontmatter.publishDate).valueOf()
+);
+
 // TODO: Write 2 actual blog posts
 // TODO: Tune cookie policy page
 // TODO: Add analytics
@@ -62,8 +69,8 @@ const description =
       Latest from the blog
     </h2>
     <div class="grid md:grid-cols-2 gap-4 justify-start mt-8">
-      <BlogTeaser />
-      <BlogTeaser />
+      <BlogTeaser post={allPosts[0]} />
+      <BlogTeaser post={allPosts[1]} />
     </div>
   </div>
 </Layout>

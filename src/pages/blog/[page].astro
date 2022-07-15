@@ -10,31 +10,14 @@ const buttonClasses =
   "inline-block font-medium text-md leading-tight uppercase rounded transition duration-150 ease-in-out text-red-600 hover:text-red-700";
 
 export async function getStaticPaths({ paginate }) {
-  const blogPages = [
-    {
-      id: 1,
-    },
-    {
-      id: 2,
-    },
-    {
-      id: 3,
-    },
-    {
-      id: 4,
-    },
-    {
-      id: 5,
-    },
-    {
-      id: 6,
-    },
-    {
-      id: 7,
-    },
-  ];
+  let allPosts = await Astro.glob("../posts/*.md");
+  allPosts = allPosts.sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishDate).valueOf() -
+      new Date(a.frontmatter.publishDate).valueOf()
+  );
 
-  return paginate(blogPages, { pageSize: 6 });
+  return paginate(allPosts, { pageSize: 6 });
 }
 
 const { page } = Astro.props;
@@ -65,7 +48,7 @@ const { page } = Astro.props;
     </div>
     <div class="mt-12">
       <div class="grid md:grid-cols-2 gap-4 justify-start">
-        {page.data.map(({ id }) => <BlogTeaser />)}
+        {page.data.map((p) => <BlogTeaser post={p} />)}
       </div>
     </div>
 
