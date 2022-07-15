@@ -9,6 +9,11 @@ const { title, description, noindex } = Astro.props as Props;
 ---
 
 <head>
+  <script is:inline>
+    partytown = {
+      forward: ['dataLayer.push'],
+    }
+  </script>
   <!-- Google Tag Manager -->
   <script type="text/partytown">
     (function (w, d, s, l, i) {
