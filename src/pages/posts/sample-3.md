@@ -4,7 +4,7 @@ setup: |
 publishDate: 18 Sep 2021
 title: Hello world!
 description: Just a Hello World Post!
-img: https://i.picsum.photos/id/780/536/354.jpg?hmac=0pNfPPgLlCM183BSFbD5J81inkF6WtTnzw5AaKlLZFY
+img: assets/images/projects/discordrelaybot.png
 imgAlt: Picture of mountains
 ---
 
