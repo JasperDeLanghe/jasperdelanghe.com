@@ -9,19 +9,21 @@ const { title, description, noindex } = Astro.props as Props;
 ---
 
 <head>
-  <script is:inline>
-    partytown = {
-      forward: ['dataLayer.push'],
-    }
-  </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script type='text/partytown' src="https://www.googletagmanager.com/gtag/js?id=G-GEZMEHGFR0"></script>
-<script type='text/partytown'>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script is:inline>
+  partytown = {
+    forward: ['dataLayer.push'],
+  }
+</script>
+<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-GEZMEHGFR0'>
 
-  gtag('config', 'G-GEZMEHGFR0');
+</script>
+<script type='text/partytown'>
+  window.dataLayer = window.dataLayer || []
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+  gtag('js', new Date())
+  gtag('config', 'G-GEZMEHGFR0')
 </script>
 
   <!-- Global Metadata -->
