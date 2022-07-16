@@ -19,15 +19,6 @@ const { title, description, activePage, noindex } = Astro.props as Props;
   <Head title={title} description={description} noindex={noindex} />
 
   <body class="text-slate-700 selection:bg-red-200 bg-slate-50">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5HQ4WCT"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <Header active={activePage} />
 
